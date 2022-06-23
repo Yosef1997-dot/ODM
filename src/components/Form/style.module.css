@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+.editForm {
+    width: 28.64vw;
+    height: 75.741vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15.93vw;
+    padding-top: 10.37vh;
+}
+
+.backLink{
+    margin-bottom: 2.12vh;
+    color: rgba(0, 0, 0, 1);
+}
+.nameTitle{
+    margin-bottom: 6.29vh;
+}
+.editTitle{
+    margin-bottom: 4.25vh;
+    font-weight: 350;
+}
+.inputsContainer {
+    display: grid;
+    /* grid-template-columns: repeat(1,1fr 2.53fr ); */
+    grid-template-columns: repeat(1,7.6vw 19.37vw );
+    align-items: center;
+    gap: 0.74vh;
+    width: 600px;
+    margin-bottom: 5vh;
+    margin-left: 1.04vw;
+}
+
+.spanTitle {
+    font-size: small;
+    font-weight: bold;
+}
+
+.inp {
+    height: 4.53vh;
+    /* width: 379px; */
+    background: #FFFFFF;
+    box-shadow: inset -2px 2px 7px rgba(0, 0, 0, 0.28);
+    border-radius: 0px;
+    padding: 0 1.14vw;
+    cursor: pointer;
+    appearance: none;
+}
+
+/* .buttonsContainer{
+display: flex;
+
+} */
+.buttonsContainer button{
+    width: 7.65vw;
+    height: 5.09vh;
+    border-radius: 0;
+}
+.submitBtn{
+background-color: rgba(47, 128, 237, 1);
+margin-right: 1.09vw;
+color: #FFFFFF;
+}
+.submitBtn:hover{
+background-color: rgb(51 51 51);;
+}
+.cancelBtn{
+background-color: rgba(249, 249, 249, 1);
+color: rgba(121, 121, 121, 1);
+}
+
+.msgOn{
+    margin-top:8px ;
+display: inline;
+font-size: small;
+font-weight: bold;
+}
+.msgOff{
+    display: none;
+}
