@@ -1,0 +1,112 @@
+.right {
+    display: flex;
+    height: 100%;
+    width: 57.2916667vw;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.before {
+    height: 22.300885vh;
+    width: 30.9895833vw;
+    font-size: 45px;
+    text-align: center;
+    color: #000000;
+}
+
+.before>div {
+    height: 33.333%;
+    width: 100%;
+}
+
+.title>b {
+    display: block;
+    font-size: 45px;
+    text-align: center;
+}
+
+.comparison {
+    display: flex;
+    margin-top: 9.35vh;
+    width: 46.5625vw;
+    height: 36.3716814vh;
+}
+
+.person {
+    width: 15.625vw;
+    height: 36.3716814vh;
+}
+
+.middle {
+    width: 12.03125vw;
+    height: 36.3716814vh;
+    padding: 0 1.04166667vw;
+}
+
+.one {
+    background: #2F80ED;
+    box-shadow: inset -2px 2px 9px rgba(0, 0, 0, 0.09);
+
+}
+
+.two {
+    background: #F2994A;
+    box-shadow: inset -2px 2px 9px rgba(0, 0, 0, 0.09);
+}
+
+.head {
+    height: 38.1995134%;
+    width: 100%;
+}
+
+.name {
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 33.6982968%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+
+.up {
+    border-bottom: 1px solid black;
+}
+
+.total {
+    /* border-bottom: 1px solid black; */
+    width: 100%;
+    height: 14.9635036%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14.9635036%;
+    color: #ffffff;
+}
+
+.totalMiddle {
+    color: black;
+}
+
+.difference {
+    width: 100%;
+    padding-top: 2.4vh;
+    text-align: center;
+    height: 13.1386861%;
+    background-color: white;
+}
+
+.up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+.down {
+    height: 28.1022898%;
+}

@@ -7,7 +7,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import './App.css';
+
 
 function App() {
   return (
@@ -17,7 +17,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/edit' element={<Form/>}/>
-      
       </Routes>
       </BrowserRouter>
       <Footer />

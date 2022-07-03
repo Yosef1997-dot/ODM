@@ -17,10 +17,9 @@ function currentDateAndTime(){
 }
 
 export default function Clock() {
-
+    
+    const [clock, setClock] = useState(currentDateAndTime())
     setTimeout(function(){setClock(currentDateAndTime()) }, 1000);
-
-    const [clock, setClock] = useState(false)
 
     return (
         <div className={styles.clock}>

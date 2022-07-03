@@ -1,7 +1,6 @@
 .left {
   height: 100%;
   width: 42.7083333vw;
-  /* border-right: 1px solid black; */
   display: flex;
   justify-content: end;
   align-items: center;
@@ -10,7 +9,6 @@
 
 .listOfNames {
   padding: 3.981vh 1.51vw;
-  /* margin-top: 4.351vh; */
   direction: ltr;
 }
 
@@ -20,7 +18,6 @@
   direction: rtl;
   width: 31.458vw;
   box-shadow: inset -2px 2px 7px rgba(0, 0, 0, 0.28);
-
   height: 68.704vh;
   overflow-y: scroll;
   z-index: 999;
@@ -28,14 +25,12 @@
 }
 
 .Options {
-  /* removed fixed positioning */
-  /* removed overflow */
   background: green;
   width: 98%;
   height: 600px;
 }
 
-/* asdfghj */
+
 .wrapIconAndInput{
   display: flex;
   align-items: center;
