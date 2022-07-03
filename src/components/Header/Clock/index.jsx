@@ -1,5 +1,5 @@
 import styles from "./style.module.css"
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 function currentDateAndTime(){
 
@@ -19,7 +19,12 @@ function currentDateAndTime(){
 export default function Clock() {
     
     const [clock, setClock] = useState(currentDateAndTime())
-    setTimeout(function(){setClock(currentDateAndTime()) }, 1000);
+
+    useEffect(()=>{
+        setTimeout(function(){setClock(currentDateAndTime())
+            console.log('qwerty')}, 1000);
+    },[clock])
+   
 
     return (
         <div className={styles.clock}>

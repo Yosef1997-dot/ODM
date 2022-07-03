@@ -34,6 +34,7 @@ export default function Comparision({ idsCheckedList }) {
                 <div className={styles.middle}>
                     <div className={styles.head} ></div>
                     <div className={`${styles.name} ${styles.up}`}><b>Vs.</b></div>
+                    <hr style={{margin:'0 25px', color:'black'}} />
                     <div className={`${styles.total} ${styles.totalMiddle}`}>Yearly income</div>
                     <div className={styles.difference}></div>
                 </div>
