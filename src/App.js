@@ -1,9 +1,8 @@
 import Header from './components/Header';
-import Main from './components/Main';
-import Form from './components/Form'
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage'
+import FormPage from './pages/FormPage'
 import {
-  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -13,12 +12,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/edit' element={<Form/>}/>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/edit' element={<FormPage />} />
       </Routes>
-      </BrowserRouter>
       <Footer />
     </div>
   );

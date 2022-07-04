@@ -15,68 +15,70 @@ export default function Form() {
     // Makes the decision if message: Detsild updated will be visible or not 
     const [updateMsg, setUpdateMsg] = useState(false)
 
-    useEffect(() => {
+    function setUserDetails() {
         axios.get(`http://localhost:5003/edit/${userId}`)
             .then(res => setUser(res.data))
-    }, [])
-
-
-    function handleSubmit(e) {
-        e.preventDefault()
-        axios.put(`http://localhost:5003/update/${userId}`, user)
-        setUpdateMsg(true)
     }
+
+    useEffect(() => {
+        setUserDetails()
+    }, [])
 
     // inputs onChange
     function handleOnChange(e) {
         setUpdateMsg(false)
         setUser({ ...user, [e.target.name]: e.target.value })
     }
-   
+
+    function handleSubmit(e) {
+        console.log(e.target)
+        e.preventDefault()
+        axios.put(`http://localhost:5003/update/${userId}`, user)
+        setUpdateMsg(true)
+    }
+
     return (
-        <form onSubmit={handleSubmit} className={styles.editForm}>
-
+        <div className={styles.editForm}>
             <Link className={styles.backLink} to="/"> {`<Back`}</Link>
-
             <h1 className={styles.nameTitle}>{user.name}</h1>
-
             <h3 className={styles.editTitle}>Edit details</h3>
+            <form onSubmit={handleSubmit} >
 
-            <div className={styles.inputsContainer}>
+                <div className={styles.inputsContainer}>
 
-                <span className={styles.spanTitle} >Address</span>
-                <input className={styles.inp} type="text" name={"address"} value={user.address} onChange={(e) => handleOnChange(e)} required />
+                    <span className={styles.spanTitle} >Address</span>
+                    <input className={styles.inp} type="text" name={"address"} value={user.address} onChange={(e) => handleOnChange(e)} required />
 
-                <span className={styles.spanTitle}>Phone</span>
-                <input className={styles.inp} type="text" name={"phone"} value={user.phone} onChange={(e) => handleOnChange(e)} required />
+                    <span className={styles.spanTitle}>Phone</span>
+                    <input className={styles.inp} type="text" name={"phone"} value={user.phone} onChange={(e) => handleOnChange(e)} required />
 
-                <span className={styles.spanTitle}>Email</span>
-                <input className={styles.inp} type="email" name={"email"} value={user.email} onChange={(e) => handleOnChange(e)} required />
+                    <span className={styles.spanTitle}>Email</span>
+                    <input className={styles.inp} type="email" name={"email"} value={user.email} onChange={(e) => handleOnChange(e)} required />
 
-                <span className={styles.spanTitle}>Marrital Status</span>
-                <select className={styles.inp} name={"maritalStatus"} id="" value={user.maritalStatus} onChange={(e) => handleOnChange(e)} required>
-                    <option value="single">single</option>
-                    <option value="married">married</option>
-                    <option value="divorced">divorced</option>
-                    <option value="other">other</option>
-                </select>
+                    <span className={styles.spanTitle}>Marrital Status</span>
+                    <select className={styles.inp} name={"maritalStatus"} id="" value={user.maritalStatus} onChange={(e) => handleOnChange(e)} required>
+                        <option value="single">single</option>
+                        <option value="married">married</option>
+                        <option value="divorced">divorced</option>
+                        <option value="other">other</option>
+                    </select>
 
-                <span className={styles.spanTitle}>Gender</span>
-                <select className={styles.inp} name={"gender"} id="" value={user.gender} onChange={(e) => handleOnChange(e)} required>
-                    <option value="male">male</option>
-                    <option value="female">female</option>
-                    <option value="prefer not to say">prefer not to say</option>
-                </select>
-            </div>
+                    <span className={styles.spanTitle}>Gender</span>
+                    <select className={styles.inp} name={"gender"} id="" value={user.gender} onChange={(e) => handleOnChange(e)} required>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                        <option value="prefer not to say">prefer not to say</option>
+                    </select>
 
-            <div className={styles.buttonsContainer}>
-                <button className={styles.submitBtn} type="submit">Update</button>
-                <Link to="/">
-                    <button className={styles.cancelBtn} >Cancel</button>
-                </Link>
-            </div>
-            <p className={updateMsg?styles.msgOn:styles.msgOff}>Details Updated</p>
+                </div>
 
-        </form>
+                <div className={styles.buttonsContainer}>
+                    <button className={styles.submitBtn} type="submit">Update</button>
+                    <button type="button" className={styles.cancelBtn} onClick={() => setUserDetails()} >Cancel</button>
+                </div>
+                <p className={updateMsg ? styles.msgOn : styles.msgOff}>Details Updated</p>
+
+            </form>
+        </div>
     )
 }

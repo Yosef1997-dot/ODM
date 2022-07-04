@@ -3,8 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 // import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 // import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import Arrow from '../../../Arrow'
-export default function Comparision({ idsCheckedList }) {
+import Arrow from '../Arrow'
+export default function Comparison({ idsCheckedList }) {
 
     const [comparedUsers, setComparedUsers] = useState({})
 

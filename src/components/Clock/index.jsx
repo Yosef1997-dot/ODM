@@ -22,7 +22,7 @@ export default function Clock() {
 
     useEffect(()=>{
         setTimeout(function(){setClock(currentDateAndTime())
-            console.log('qwerty')}, 1000);
+        }, 1000);
     },[clock])
    
 

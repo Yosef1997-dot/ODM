@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import axios from "axios";
 
 
-export default function Left({ setIdsCheckedList, idsCheckedList }) {
+export default function ListOfEmployees({ setIdsCheckedList, idsCheckedList }) {
 
     const [users, setUsers] = useState()
 
