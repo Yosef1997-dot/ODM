@@ -1,0 +1,15 @@
+
+
+.arrow_up {
+    display: inline-block;
+    border-left: 6.5px solid transparent;
+    border-right: 6.5px solid transparent;
+  /* border-bottom: 19px solid black;   */
+}
+
+.arrow_down {
+    display: inline-block;
+    border-left: 6.5px solid transparent;
+    border-right: 6.5px solid transparent;
+    /* border-top: 19px solid black; */
+}
