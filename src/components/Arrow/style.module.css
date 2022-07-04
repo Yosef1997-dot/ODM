@@ -1,0 +1,5 @@
+.arrow {
+  display: inline-block;
+  border-left: 6.5px solid transparent;
+  border-right: 6.5px solid transparent;
+}

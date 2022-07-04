@@ -1,0 +1,8 @@
+.logo {
+    background-image: url('./ODM_logo.png');
+    background-size:contain;
+    width: 12.66vh;
+    height: 5.44vh;
+    background-repeat: no-repeat;
+    margin-left: 2.62vh ;
+}

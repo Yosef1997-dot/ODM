@@ -1,0 +1,11 @@
+.right {
+    display: flex;
+    width: 57.2916667vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.beforeComparing {
+    font-size: 45px;
+    text-align: center;
+}
