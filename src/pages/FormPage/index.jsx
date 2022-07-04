@@ -31,7 +31,6 @@ export default function Form() {
     }
 
     function handleSubmit(e) {
-        console.log(e.target)
         e.preventDefault()
         axios.put(`http://localhost:5003/update/${userId}`, user)
         setUpdateMsg(true)
