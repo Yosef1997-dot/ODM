@@ -28,7 +28,6 @@
 }
 .inputsContainer {
     display: grid;
-    /* grid-template-columns: repeat(1,1fr 2.53fr ); */
     grid-template-columns: repeat(1,7.6vw 19.37vw );
     align-items: center;
     gap: 0.74vh;
@@ -53,10 +52,6 @@
     appearance: none;
 }
 
-/* .buttonsContainer{
-display: flex;
-
-} */
 .buttonsContainer button{
     width: 7.65vw;
     height: 5.09vh;

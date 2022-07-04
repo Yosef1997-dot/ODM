@@ -28,7 +28,7 @@ export default function Clock() {
 
     return (
         <div className={styles.clock}>
-            {`${clock}`}
+            {clock}
         </div>
     )
 }

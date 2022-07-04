@@ -1,11 +1,6 @@
 .clock{
     font-family: 'Assistant';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
-    line-height: 26px;
-    display: flex;
-    text-align: right;
     color: #FFFFFF;
     margin: 0 1.04%;
     margin-top: 40px;

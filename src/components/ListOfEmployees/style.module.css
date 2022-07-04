@@ -7,12 +7,6 @@
   position: relative;
 }
 
-.listOfNames {
-  padding: 3.981vh 1.51vw;
-  direction: ltr;
-}
-
-
 .OptionsWrapper {
   position: absolute;
   direction: rtl;
@@ -20,25 +14,23 @@
   box-shadow: inset -2px 2px 7px rgba(0, 0, 0, 0.28);
   height: 68.704vh;
   overflow-y: scroll;
-  z-index: 999;
+  /* z-index: 999; */
   margin-top: 4.351vh;
 }
 
-.Options {
-  background: green;
-  width: 98%;
-  height: 600px;
+.listOfNames {
+  padding: 3.981vh 1.51vw;
+  direction: ltr;
 }
-
 
 .wrapIconAndInput{
   display: flex;
   align-items: center;
 }
+
 .wrapIconAndInput:hover{
   color: rgba(130, 130, 130, 1);
 }
-
 
 .lighter{
   color: rgba(130, 130, 130, 1);
@@ -52,7 +44,6 @@
   padding-right: 15px;
   cursor: pointer;
   font-size: 22px;
-
 }
 
 /* Hide the browser's default checkbox */
@@ -72,8 +63,6 @@
   height: 25px;
   width: 25px;
   border: 3px solid #D6D6D6;
-  /* background-color: #eee; */
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,8 +77,8 @@
 /* When the checkbox is checked, add a blue background */
 .container input:checked~.checkmark span {
   background-color: #000000;
-
 }
+
 .editIcon{
   font-size: 10px;
 display: none;
@@ -106,7 +95,6 @@ cursor: pointer;
   color: rgba(51, 51, 51, 1);
   display: flex;
 }
-
 
 .editIcon .icon{
   height: 7px;

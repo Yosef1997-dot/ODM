@@ -1,20 +1,11 @@
-.right{
+.right {
     display: flex;
-    height: 100%;
     width: 57.2916667vw;
     align-items: center;
     justify-content: center;
 }
 
-.before{
-    height: 22.300885vh;
-    width: 30.9895833vw;
+.beforeComparing {
     font-size: 45px;
     text-align: center;
-    color: #000000;  
-}
-
-.before >div{
-    height: 33.333%;
-    width: 100%;
 }

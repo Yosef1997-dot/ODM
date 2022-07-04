@@ -1,6 +1,6 @@
 import styles from "./style.module.css"
-import DiffBtwEmployees from '../DiffBtwEmployees'
-import ListOfEmployees from "../ListOfEmployees"
+import DiffBtwEmployees from '../../components/DiffBtwEmployees'
+import ListOfEmployees from "../../components/ListOfEmployees"
 import { useState } from "react"
 
 
