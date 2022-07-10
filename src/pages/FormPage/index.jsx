@@ -16,7 +16,7 @@ export default function Form() {
     const [updateMsg, setUpdateMsg] = useState(false)
 
     function setUserDetails() {
-        axios.get(`http://localhost:5003/edit/${userId}`)
+        axios.get(`http://localhost:5000/edit/${userId}`)
             .then(res => setUser(res.data))
     }
 
@@ -24,7 +24,6 @@ export default function Form() {
         setUserDetails()
     }, [])
 
-    // inputs onChange
     function handleOnChange(e) {
         setUpdateMsg(false)
         setUser({ ...user, [e.target.name]: e.target.value })
@@ -32,7 +31,7 @@ export default function Form() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        axios.put(`http://localhost:5003/update/${userId}`, user)
+        axios.put(`http://localhost:5000/update/${userId}`, user)
         setUpdateMsg(true)
     }
 
@@ -46,16 +45,16 @@ export default function Form() {
                 <div className={styles.inputsContainer}>
 
                     <span className={styles.spanTitle} >Address</span>
-                    <input className={styles.inp} type="text" name={"address"} value={user.address} onChange={(e) => handleOnChange(e)} required />
+                    <input className={styles.inp} type="text" name={"address"} value={user.address||''} onChange={(e) => handleOnChange(e)} required />
 
                     <span className={styles.spanTitle}>Phone</span>
-                    <input className={styles.inp} type="text" name={"phone"} value={user.phone} onChange={(e) => handleOnChange(e)} required />
+                    <input className={styles.inp} type="text" name={"phone"} value={user.phone||''} onChange={(e) => handleOnChange(e)} required />
 
                     <span className={styles.spanTitle}>Email</span>
-                    <input className={styles.inp} type="email" name={"email"} value={user.email} onChange={(e) => handleOnChange(e)} required />
+                    <input className={styles.inp} type="email" name={"email"} value={user.email||''} onChange={(e) => handleOnChange(e)} required />
 
-                    <span className={styles.spanTitle}>Marrital Status</span>
-                    <select className={styles.inp} name={"maritalStatus"} id="" value={user.maritalStatus} onChange={(e) => handleOnChange(e)} required>
+                    <span className={styles.spanTitle}>Marital Status</span>
+                    <select className={styles.inp} name={"maritalStatus"} id="" value={user.maritalStatus||''} onChange={(e) => handleOnChange(e)} required>
                         <option value="single">single</option>
                         <option value="married">married</option>
                         <option value="divorced">divorced</option>
@@ -63,7 +62,7 @@ export default function Form() {
                     </select>
 
                     <span className={styles.spanTitle}>Gender</span>
-                    <select className={styles.inp} name={"gender"} id="" value={user.gender} onChange={(e) => handleOnChange(e)} required>
+                    <select className={styles.inp} name={"gender"} id="" value={user.gender||''} onChange={(e) => handleOnChange(e)} required>
                         <option value="male">male</option>
                         <option value="female">female</option>
                         <option value="prefer not to say">prefer not to say</option>

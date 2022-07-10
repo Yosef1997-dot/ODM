@@ -1,7 +1,12 @@
-First, activate the back of this project by
-getting the files from Github with this link (https://github.com/Yosef1997-dot/ODM_backend) and follow the README file there.
+For running the front side of the application follow these steps:
 
-Then, activate the front side by downloading the files and entering the next commands:
-======npm init 
-and
-======npm start 
+1. Run inside the Front folder the next command (with the dot):
+docker build -t home_assignment_front . 
+
+2. Run the next command:
+docker run --name home_assignment_front_c -p 3000:3000 --rm home_assignment_front
+
+3. Now it's running on port 3000 and if there is also connction to DB you can use the app 
+
+4. To stop and remove the container just run this command:
+docker stop home_assignment_front_c

@@ -10,10 +10,10 @@ export default function ListOfEmployees({ setIdsCheckedList, idsCheckedList }) {
     const [users, setUsers] = useState()
 
     useEffect(() => {
-        axios.get('http://localhost:5003/users')
+        axios.get('http://localhost:5000/users')
             // .then(res=>console.log(res))
             .then(res => setUsers(res.data))
-    }, [])
+    },[])
 
     // desides if checkbox can be checked 
     function handleChangeInput(e) {
@@ -27,7 +27,7 @@ export default function ListOfEmployees({ setIdsCheckedList, idsCheckedList }) {
         } else {
             if (idsCheckedList.length === 2) {
                 let index = idsCheckedList.indexOf(userId)
-                index = (index==0)?  1:0
+                index = (index===0)?  1:0
                 setIdsCheckedList([idsCheckedList[index]])
             } else {
                 setIdsCheckedList([])
