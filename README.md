@@ -21,7 +21,7 @@ npm i
 2. Run the next command:
 npm start
 
-3. Now it's running on port 3000 and if there is also connction to DB you can use the app 
+3. Now it's running on port 3000 and if there is also connection to DB you can use the app 
 
 
 
